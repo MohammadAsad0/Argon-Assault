@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -20,9 +21,15 @@ public class rocketScript : MonoBehaviour
     void Update()
     {
         processTranslation();
+        processRotation();
     }
 
-    void processTranslation()
+    private void processRotation()
+    {
+
+    }
+
+    private void processTranslation()
     {
         float horizontalThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float verticalThrow = CrossPlatformInputManager.GetAxis("Vertical");
